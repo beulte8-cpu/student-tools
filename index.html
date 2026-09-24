@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="학생들을 위한 계산기, 공부 타이머, 글자 수 계산기, 단위 변환기">
+  <title>학생 도구함</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">📚 학생 도구함</a>
+
+      <button id="darkModeBtn" class="icon-btn" aria-label="다크모드">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <span class="badge">STUDENT TOOLS</span>
+      <h1>공부할 때 필요한 도구를<br>한곳에서</h1>
+      <p>계산기부터 타이머, 글자 수 계산까지 무료로 사용할 수 있어요.</p>
+    </section>
+
+    <!-- 광고 자리 -->
+    <div class="ad-box">
+      <span>광고 영역</span>
+      <small>AdSense 승인 후 광고를 넣을 수 있습니다.</small>
+    </div>
+
+    <section class="tools">
+
+      <!-- 계산기 -->
+      <article class="card">
+        <div class="card-title">
+          <span class="tool-icon">🧮</span>
+          <div>
+            <h2>일반 계산기</h2>
+            <p>간단한 계산을 빠르게 해보세요.</p>
+          </div>
+        </div>
+
+        <input
+          id="calculatorInput"
+          class="input"
+          type="text"
+          placeholder="예: 25 * 4 + 10"
+        >
+
+        <button id="calculateBtn" class="primary-btn">
+          계산하기
+        </button>
+
+        <div id="calculatorResult" class="result">
+          결과가 여기에 표시됩니다.
+        </div>
+      </article>
+
+
+      <!-- 백분율 계산기 -->
+      <article class="card">
+        <div class="card-title">
+          <span class="tool-icon">📊</span>
+          <div>
+            <h2>백분율 계산기</h2>
+            <p>숫자의 몇 퍼센트인지 계산합니다.</p>
+          </div>
+        </div>
+
+        <input
+          id="percentNumber"
+          class="input"
+          type="number"
+          placeholder="숫자"
+        >
+
+        <input
+          id="percentValue"
+          class="input"
+          type="number"
+          placeholder="퍼센트 (%)"
+        >
+
+        <button id="percentBtn" class="primary-btn">
+          계산하기
+        </button>
+
+        <div id="percentResult" class="result">
+          결과가 여기에 표시됩니다.
+        </div>
+      </article>
+
+
+      <!-- 글자 수 -->
+      <article class="card">
+        <div class="card-title">
+          <span class="tool-icon">📝</span>
+          <div>
+            <h2>글자 수 계산기</h2>
+            <p>글자 수와 공백 포함 글자 수를 확인하세요.</p>
+          </div>
+        </div>
+
+        <textarea
+          id="textInput"
+          class="textarea"
+          placeholder="여기에 글을 입력하세요."
+        ></textarea>
+
+        <div class="counter">
+          <div>
+            <strong id="charCount">0</strong>
+            <span>글자</span>
+          </div>
+
+          <div>
+            <strong id="noSpaceCount">0</strong>
+            <span>공백 제외</span>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- 공부 타이머 -->
+      <article class="card">
+        <div class="card-title">
+          <span class="tool-icon">⏱️</span>
+          <div>
+            <h2>공부 타이머</h2>
+            <p>집중할 시간을 설정해보세요.</p>
+          </div>
+        </div>
+
+        <div id="timer" class="timer">
+          25:00
+        </div>
+
+        <div class="timer-buttons">
+          <button id="startTimer" class="primary-btn">
+            시작
+          </button>
+
+          <button id="pauseTimer" class="secondary-btn">
+            일시정지
+          </button>
+
+          <button id="resetTimer" class="secondary-btn">
+            초기화
+          </button>
+        </div>
+      </article>
+
+
+      <!-- 단위 변환 -->
+      <article class="card">
+        <div class="card-title">
+          <span class="tool-icon">📏</span>
+          <div>
+            <h2>길이 변환기</h2>
+            <p>미터와 킬로미터를 서로 변환합니다.</p>
+          </div>
+        </div>
+
+        <input
+          id="meterInput"
+          class="input"
+          type="number"
+          placeholder="숫자를 입력하세요"
+        >
+
+        <select id="unitSelect" class="input">
+          <option value="mToKm">m → km</option>
+          <option value="kmToM">km → m</option>
+        </select>
+
+        <button id="convertBtn" class="primary-btn">
+          변환하기
+        </button>
+
+        <div id="convertResult" class="result">
+          결과가 여기에 표시됩니다.
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- 광고 자리 -->
+    <div class="ad-box">
+      <span>광고 영역</span>
+      <small>AdSense 승인 후 광고를 넣을 수 있습니다.</small>
+    </div>
+
+
+    <!-- 설명 -->
+    <section class="info">
+      <h2>학생 도구함이란?</h2>
+
+      <p>
+        학생 도구함은 공부와 일상생활에서 자주 사용하는
+        여러 가지 계산 및 학습 도구를 한곳에서 사용할 수 있도록
+        만든 무료 웹사이트입니다.
+      </p>
+
+      <h3>백분율 계산 방법</h3>
+
+      <p>
+        어떤 숫자의 특정 퍼센트를 구하려면
+        숫자 × 퍼센트 ÷ 100을 사용하면 됩니다.
+      </p>
+
+      <p class="example">
+        예: 200의 15% → 200 × 15 ÷ 100 = 30
+      </p>
+    </section>
+
+
+    <!-- 광고 자리 -->
+    <div class="ad-box">
+      <span>광고 영역</span>
+      <small>AdSense 승인 후 광고를 넣을 수 있습니다.</small>
+    </div>
+
+  </main>
+
+
+  <footer>
+    <div class="container footer-content">
+      <p>© 2026 학생 도구함</p>
+
+      <div class="footer-links">
+        <a href="#">개인정보처리방침</a>
+        <a href="#">이용약관</a>
+        <a href="#">문의</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
